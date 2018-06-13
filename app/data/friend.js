@@ -1,6 +1,6 @@
 var friendList = [{
   "name": "Tina",
-  "profilePic": "https://randomuser.me/api/portraits/women/2.jpg",
+  "profilePic": "https://randomuser.me/api/portraits/women/12.jpg",
   "scores": ["5", "1", "4", "4", "5", "1", "2", "5", "4", "1"]
 }, {
   "name": "Jane",

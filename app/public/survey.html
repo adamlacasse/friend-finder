@@ -138,7 +138,7 @@
             <img id="matchPic" src="" alt="No Image" width = 250px>
           </div>
         <div class="modal-footer">
-          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Done</a>
+          <a href="/home" class=" modal-action modal-close waves-effect waves-green btn-flat">Done</a>
         </div>
       </div>
 
@@ -147,26 +147,24 @@
 <script type="text/javascript">
 $(document).ready(function() {
     $("#submitBtn").on("click", function() {
-        //form validation
-        // function validateForm() {
-        //     var isValid = true;
-        //     $('.validate').each(function() {
-        //         if ($(this).val() === ''){
-        //             isValid = false;
-        //         }
-        //     });
+        function validateForm() {
+            var isValid = true;
+            $('.validate').each(function() {
+                if ($(this).val() === ''){
+                    isValid = false;
+                }
+            });
 
-        //     $('.browser-default').each(function() {
-        //         if ($(this).val() === ""){
-        //             isValid = false;
-        //         }
-        //     });
+            $('.browser-default').each(function() {
+                if ($(this).val() === ""){
+                    isValid = false;
+                }
+            });
 
-        //     return isValid;
-        // }
+            return isValid;
+        }
 
-        //if everything is filled
-        if (true) { // if condition was validateForm() == true
+        if (validateForm()) {
             var newFriend = {
                 name: $('#name').val().trim(),
                 profilePic: $('#photo').val().trim(),
@@ -205,7 +203,7 @@ $(document).ready(function() {
             $('#q9').val("");
             $('#q10').val("");
         } else {
-            alert("Please fill out ALL fields before submitting survey!")
+            alert("Please fill out ALL fields.")
         }
     });
 });
